@@ -1,0 +1,24 @@
+# Hugo generated files
+public/
+resources/
+.hugo_build.lock
+
+# Original articles (already converted to Hugo format)
+complete/
+
+# Temporary files
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.pyc
+*.pyo

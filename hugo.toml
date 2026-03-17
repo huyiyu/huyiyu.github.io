@@ -1,4 +1,21 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'zh-cn'
+title = '技术博客'
 theme = "yinyang"
+DefaultContentLanguage = "cn"
+
+[languages]
+  [languages.cn]
+    contentDir = "content/cn"
+    languageName = "中文"
+    weight = 1
+
+[params]
+description = "技术学习笔记与分享"
+headTitle = "技术博客"
+mainSections = ["posts"]
+lazyImage = true
+
+[params.author]
+homepage = "https://github.com/huyiyu"
+name = "huyiyu"
