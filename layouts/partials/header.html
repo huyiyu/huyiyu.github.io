@@ -1,0 +1,82 @@
+{{ $curLanguageName := .Site.Language.LanguageName }}
+<header>
+  <div class="header-title">
+    <a href="{{ .Site.LanguagePrefix }}/"
+      >{{ or .Site.Params.headTitle .Site.Params.author.name }}</a
+    >
+  </div>
+  <div class="header-subtitle">{{ .Site.Params.Description }}</div>
+</header>
+
+<!-- 导航菜单 -->
+<nav class="nav-menu">
+  <div class="nav-items">
+    {{ range .Site.Menus.main }}
+    <div class="nav-item">
+      <a href="{{ .URL }}" {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>{{ .Name }}</a>
+    </div>
+    {{ end }}
+  </div>
+</nav>
+
+<div class="row end-md header-items">
+  <div class="header-item-left">
+    <button id="theme-toggle" onclick="toggleTheme()" class="theme-toggle">
+      🌙
+    </button>
+  </div>
+
+  {{ range .Site.Params.socials }}
+  <div class="header-item">
+    <a href="{{ .link }}" target="_blank">{{ .name }}</a>
+  </div>
+  {{ end }}
+</div>
+<div class="row">
+  {{ range .Site.Languages -}} {{ if ne .LanguageName $curLanguageName }}
+  <div class="lang-switch col-xs-3 col-xs-offset-9">
+    <a href="/{{ .Lang }}/">{{ .LanguageName }}</a>
+  </div>
+  {{ end }} {{ end }}
+</div>
+<div class="header-line"></div>
+
+<style>
+.nav-menu {
+  margin: 10px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.nav-item a {
+  color: var(--link-color);
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.nav-item a:hover {
+  background-color: var(--code-bg);
+  text-decoration: none;
+}
+
+.nav-item a.active {
+  font-weight: bold;
+  background-color: var(--code-bg);
+}
+
+@media (max-width: 768px) {
+  .nav-items {
+    gap: 10px;
+    font-size: 14px;
+  }
+}
+</style>

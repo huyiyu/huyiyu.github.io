@@ -19,3 +19,59 @@ lazyImage = true
 [params.author]
 homepage = "https://github.com/huyiyu"
 name = "huyiyu"
+
+# 主菜单
+[[menu.main]]
+name = "首页"
+url = "/"
+weight = 10
+
+[[menu.main]]
+name = "Java"
+url = "/posts/java/"
+weight = 100
+
+[[menu.main]]
+name = "Spring Framework"
+url = "/posts/spring-framework/"
+weight = 200
+
+[[menu.main]]
+name = "Spring Boot"
+url = "/posts/spring-boot/"
+weight = 300
+
+[[menu.main]]
+name = "Spring MVC"
+url = "/posts/spring-mvc/"
+weight = 400
+
+[[menu.main]]
+name = "Spring Security"
+url = "/posts/spring-security/"
+weight = 500
+
+[[menu.main]]
+name = "MyBatis"
+url = "/posts/mybatis/"
+weight = 600
+
+[[menu.main]]
+name = "Netty"
+url = "/posts/netty/"
+weight = 700
+
+[[menu.main]]
+name = "Tomcat"
+url = "/posts/tomcat/"
+weight = 800
+
+[[menu.main]]
+name = "Kubernetes"
+url = "/posts/kubernetes/"
+weight = 900
+
+[[menu.main]]
+name = "其他"
+url = "/posts/others/"
+weight = 1000
