@@ -3,6 +3,7 @@ title: "spring boot 启动过程"
 date: 2026-03-17
 categories: ['Spring Boot']
 draft: false
+weight: 300
 ---
 
 # spring boot 启动过程

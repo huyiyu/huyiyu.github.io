@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'zh-cn'
-title = '技术博客'
+title = '胡毅宇个人博客'
 theme = "yinyang"
 DefaultContentLanguage = "cn"
 
@@ -12,7 +12,7 @@ DefaultContentLanguage = "cn"
 
 [params]
 description = "技术学习笔记与分享"
-headTitle = "技术博客"
+headTitle = "胡毅宇个人博客"
 mainSections = ["posts"]
 lazyImage = true
 

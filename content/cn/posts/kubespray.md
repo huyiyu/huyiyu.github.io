@@ -3,6 +3,7 @@ title: "使用kuberspray 离线部署攻略"
 date: 2026-03-17
 categories: ['Kubernetes']
 draft: false
+weight: 900
 ---
 
 # 使用kuberspray 离线部署攻略

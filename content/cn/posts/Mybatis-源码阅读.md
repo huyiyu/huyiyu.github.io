@@ -3,6 +3,7 @@ title: "mybatis 源码阅读"
 date: 2026-03-17
 categories: ['MyBatis']
 draft: false
+weight: 600
 ---
 
 # mybatis 源码阅读

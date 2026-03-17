@@ -3,6 +3,7 @@ title: "mybatis spring 整合"
 date: 2026-03-17
 categories: ['MyBatis']
 draft: false
+weight: 610
 ---
 
 # mybatis spring 整合

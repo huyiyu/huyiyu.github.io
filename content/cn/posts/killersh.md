@@ -3,6 +3,7 @@ title: "CKA刷题心得"
 date: 2026-03-17
 categories: ['Kubernetes']
 draft: false
+weight: 910
 ---
 
 # CKA刷题心得

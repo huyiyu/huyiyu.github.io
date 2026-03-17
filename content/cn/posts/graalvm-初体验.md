@@ -3,6 +3,7 @@ title: "graalvm 初体验"
 date: 2026-03-17
 categories: ['GraalVM']
 draft: false
+weight: 1000
 ---
 
 # graalvm 初体验

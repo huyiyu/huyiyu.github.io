@@ -3,6 +3,7 @@ title: "tomcat启动停止流程"
 date: 2026-03-17
 categories: ['Tomcat']
 draft: false
+weight: 800
 ---
 
  # tomcat 工作原理

@@ -3,6 +3,7 @@ title: "CKA 二模考试总结"
 date: 2026-03-17
 categories: ['Kubernetes']
 draft: false
+weight: 930
 ---
 
 # CKA 二模考试总结
