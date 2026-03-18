@@ -92,6 +92,52 @@ a:hover {
   border: 0;
 }
 
+/* code block zoom styles */
+.markdown-body pre {
+  transition: all 0.3s ease;
+  cursor: zoom-in;
+  position: relative;
+}
+
+.markdown-body pre.zoomed {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  z-index: 1000;
+  border-radius: 10px;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.8);
+  overflow: auto;
+  cursor: zoom-out;
+}
+
+.markdown-body pre.zoomed > code {
+  font-size: 110%;
+}
+
+/* close button for zoomed code block */
+.markdown-body pre.zoomed::after {
+  content: "×";
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.markdown-body pre.zoomed::before {
+  content: "双击或按 ESC 关闭";
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 12px;
+  color: #666;
+  z-index: 1001;
+}
+
 /* i18n */
 
 .Chinese .markdown-body {

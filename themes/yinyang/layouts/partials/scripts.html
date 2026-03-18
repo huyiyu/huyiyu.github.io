@@ -59,4 +59,66 @@
       });
     });
   });
+
+  // Code block zoom functionality
+  document.addEventListener("DOMContentLoaded", function() {
+    const codeBlocks = document.querySelectorAll('.markdown-body pre');
+    
+    codeBlocks.forEach(function(pre) {
+      // Double click to toggle zoom
+      pre.addEventListener('dblclick', function(e) {
+        e.stopPropagation();
+        toggleZoom(this);
+      });
+      
+      // Single click on zoomed block to close (if clicking close button area)
+      pre.addEventListener('click', function(e) {
+        if (this.classList.contains('zoomed')) {
+          const rect = this.getBoundingClientRect();
+          // Check if clicking near the close button (top-right area)
+          if (e.clientX > rect.right - 50 && e.clientY < rect.top + 50) {
+            toggleZoom(this);
+          }
+        }
+      });
+    });
+    
+    // ESC key to close all zoomed blocks
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const zoomedBlocks = document.querySelectorAll('.markdown-body pre.zoomed');
+        zoomedBlocks.forEach(function(pre) {
+          pre.classList.remove('zoomed');
+        });
+      }
+    });
+    
+    // Click outside to close
+    document.addEventListener('click', function(e) {
+      const zoomedBlocks = document.querySelectorAll('.markdown-body pre.zoomed');
+      zoomedBlocks.forEach(function(pre) {
+        if (!pre.contains(e.target)) {
+          pre.classList.remove('zoomed');
+        }
+      });
+    });
+    
+    function toggleZoom(pre) {
+      // Close other zoomed blocks first
+      const zoomedBlocks = document.querySelectorAll('.markdown-body pre.zoomed');
+      zoomedBlocks.forEach(function(block) {
+        if (block !== pre) {
+          block.classList.remove('zoomed');
+        }
+      });
+      
+      // Toggle current block
+      pre.classList.toggle('zoomed');
+      
+      // Save scroll position and scroll to block if zooming in
+      if (pre.classList.contains('zoomed')) {
+        pre.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  });
 </script>
