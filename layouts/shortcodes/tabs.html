@@ -1,0 +1,26 @@
+{{/* 
+  使用方法：
+  {{< tabs "tab1" "tab2" "tab3" >}}
+  {{< tab "题目" >}}
+  题目内容...
+  {{< /tab >}}
+  {{< tab "答案" >}}
+  答案内容...
+  {{< /tab >}}
+  {{< /tabs >}}
+*/}}
+
+{{ $tabNames := .Params }}
+{{ $tabCount := len $tabNames }}
+{{ $groupId := .Ordinal }}
+
+<div class="tab-group" data-tab-group="{{ $groupId }}">
+  <div class="tab-buttons">
+    {{ range $index, $name := $tabNames }}
+    <button class="tab-btn{{ if eq $index 0 }} active{{ end }}" data-tab="{{ $groupId }}-{{ $index }}">{{ $name }}</button>
+    {{ end }}
+  </div>
+  <div class="tab-panels">
+    {{ .Inner }}
+  </div>
+</div>

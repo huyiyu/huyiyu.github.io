@@ -1,0 +1,14 @@
+{{ $groupId := .Parent.Ordinal }}
+{{ $tabName := .Get 0 }}
+{{ $index := 0 }}
+
+{{/* 找到当前 tab 在父级中的索引 */}}
+{{ range $i, $name := .Parent.Params }}
+  {{ if eq $name $tabName }}
+    {{ $index = $i }}
+  {{ end }}
+{{ end }}
+
+<div class="tab-panel{{ if eq $index 0 }} active{{ end }}" data-panel="{{ $groupId }}-{{ $index }}">
+  {{ .Inner | markdownify }}
+</div>
