@@ -10,7 +10,7 @@ weight: 300
 
 > spring boot 启动遵循以下图片显示的过程,本文根据以下过程结合源码分析
 
-![springboot启动](./springboot-1.png)
+![springboot启动](/images/spring-boot/springboot-1.png)
 
 ## 1.1 springApplication 对象创建
 

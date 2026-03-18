@@ -19,7 +19,7 @@ weight: 310
 > import 注解在spring refresh 过程的 invokeBeanFactoryPostProcessor 阶段执行ConfigurationClassPostProcessor的postProcessBeanDefinitionRegistry 发生,spring 默认在这个阶段做BeanDefinition扫描并添加到BeanDefinitionMap,此时Spring容器中仅含有**默认注册的class,和AnnotationBeanDefinitionReader需要的5个BeanDefinition**.import 前置流程时序图如下
 
 ### 2.1 import 前置流程 
-![import 前置流程](./preImport.png)
+![import 前置流程](/images/spring-boot/preImport.png)
 
 * refresh: spring AppContext的初始化
 * invokeBeanFactoryPostProcessor:对BeanFactory 的后置处理,是spring 提供的重要扩展
@@ -184,7 +184,7 @@ private void loadBeanDefinitionsFromRegistrars(Map<ImportBeanDefinitionRegistrar
 > deferImportSelector 会使用Handler 先存到默认的列表中,直到所有其他的注解解析完了才执行process方法,process执行selectImport 并形成entry列表，调用processImport 与普通ImportSelector 相似。多了分组和延迟执行的功能
 
 
-![deferImportSelector](./deferImportSelector.png)
+![deferImportSelector](/images/spring-boot/deferImportSelector.png)
 
 ```java
 public void handle(ConfigurationClass configClass, DeferredImportSelector importSelector) {

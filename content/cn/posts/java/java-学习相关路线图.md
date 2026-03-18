@@ -7,7 +7,7 @@ weight: 100
 ---
 
 # java 学习路线
-![java 学习路线](./mindmap.png)
+![java 学习路线](/images/java/mindmap.png)
 
 ## 推荐书籍
 1. java 基础: https://www.ituring.com.cn/book/2935

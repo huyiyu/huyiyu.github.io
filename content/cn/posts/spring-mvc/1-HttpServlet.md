@@ -10,7 +10,7 @@ weight: 400
 
 > HttpServlet 作为servlet 规范对Http请求的实现,是学习spring mvc 的准备知识
 
-![HttpServlet.png](image/HttpServlet.png)
+![HttpServlet.png](/images/spring-mvc/HttpServlet.png)
 
 ## Servlet 接口
 

@@ -459,7 +459,7 @@ public void onApplicationEvent(ApplicationEvent event) {
 
 ## 2.5 MapperFactoryBean
 类图如图所示
-![mapperFactoryBean](./MapperFactoryBean.png)
+![mapperFactoryBean](/images/mybatis/MapperFactoryBean.png)
 
 * InitializingBean 会在Bean刚创建的时候执行afterPropertySet
 * DaoSupport 实现了该接口定义了两个方法 checkDaoConfig 和initDao(该方法目前没有内容,猜想是留给自定义MapperFactoryBean扩展的)

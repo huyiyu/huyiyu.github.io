@@ -9,7 +9,7 @@ weight: 420
 # HandlerMapping (@RequestMapping注解解析) 
 > HandlerMapping 是spring mvc 的组件之一,它维护不同的 request 对应的 HandlerExecutionChain 的关系的映射关系，它在初始化的时候扫描系统中的 Handler (Controller 只是Http 的一种实现,其他类似静态文件加载,webSocket,也有自己对应的Handler)对象注册到mappingRegistry 中，请求时通过getHandler 方法分析 request 并组装对应的HandlerExecutionChain 提供给Dispatcher执行后续操作的功能。其继承关系如下图所示
 
-![handlerMapping](./image/HandlerMapping.png)
+![handlerMapping](/images/spring-mvc/HandlerMapping.png)
 
 ## HandlerMapping 结构(以requestMappingHandlerMapping 为例)
 

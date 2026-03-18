@@ -10,7 +10,7 @@ weight: 600
 > mybatis 的核心是如何创建出来一个 `SqlSessionFactory` 对象,SqlSessionFactory 一般由 `SqlSessionFactoryBuilder.build` 方法创建;其次是如何获取Mapper对象,在读取XML配置后,Mybatis将Mapper信息缓存到了Configuration的MapperRegistry里面,在主动调用 `getMapper(Class<T> class,Sqlsession session)` 方法中获取到MapperProxyFactory 然后通过jdk动态代理创建对象;最后是代理方法如何执行,MappperProxy 对象实现了jdk动态代理的Invoktion
 ## 1. SqlSessionFactory 创建
 
-![SqlSessionFactory](./sqlSessionFactory%20%E5%88%9B%E5%BB%BA.png)
+![SqlSessionFactory](/images/mybatis/sqlSessionFactory%20%E5%88%9B%E5%BB%BA.png)
 
 ```java
 // sqlsessionFactory创建

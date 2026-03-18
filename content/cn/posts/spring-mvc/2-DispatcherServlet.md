@@ -10,7 +10,7 @@ weight: 410
 
 > DispatcherServlet 是spring mvc 请求入口,通过DispatcherServlet 将所有请求转发到各个Controller,DispatcherServlet类图如下
 
-![DispatcherServlet](./image/DispatcherServlet.png)
+![DispatcherServlet](/images/spring-mvc/DispatcherServlet.png)
 
 ## HttpServletBean
 
